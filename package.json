@@ -1,0 +1,16 @@
+{
+  "name": "2fa-lock",
+  "version": "0.0.1",
+  "description": "Two-factor for your locks",
+  "main": "2faDoor.js",
+  "scripts": {
+    "start": "node ./src/2faDoor.js"
+  },
+  "author": "llan",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "pigpio": "^3.1.1"
+  }
+}
