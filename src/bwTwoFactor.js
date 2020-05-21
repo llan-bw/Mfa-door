@@ -6,7 +6,7 @@ mfa.Configuration.basicAuthPassword = process.env.BW_API_PASS;
 
 const requestTwoFactorPin = async () => {
   return await mfa.APIController.createMessagingTwoFactor(process.env.BW_ACCOUNT_ID,
-    new twofactor.TwoFactorCodeRequestSchema({
+    new mfa.TwoFactorCodeRequestSchema({
       from: process.env.BW_APPLICATION_PHONENUMBER,
       to: process.env.TO_PHONENUMBER,
       applicationId: process.env.BW_APPLICATION_ID,
@@ -16,7 +16,7 @@ const requestTwoFactorPin = async () => {
 
 const requestTwoFactorVerification = async (pin) => {
   return await mfa.APIController.createVerifyTwoFactor(process.env.BW_ACCOUNT_ID,
-    new twofactor.TwoFactorVerifyRequestSchema({
+    new mfa.TwoFactorVerifyRequestSchema({
       from: process.env.BW_APPLICATION_PHONENUMBER,
       to: process.env.TO_PHONENUMBER,
       applicationId: process.env.BW_APPLICATION_ID,
